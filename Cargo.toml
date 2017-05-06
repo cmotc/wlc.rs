@@ -10,6 +10,7 @@ keywords = ["wayland", "compositor", "bindings"]
 categories = ["external-ffi-bindings", "gui"]
 license = "MIT"
 exclude = [".travis.yml", ".rustfmt.toml", "vagga.yaml"]
+wlc = { version = "1.0", features = "unsafe-stable, static" }
 
 [badges]
 travis-ci = { repository = "Drakulix/wlc.rs" }
@@ -34,3 +35,4 @@ render = []
 unsafe-stable = []
 serialization = ["serde", "serde_derive"]
 static = ["wlc-sys/static"]
+
