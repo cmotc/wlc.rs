@@ -11,6 +11,21 @@ categories = ["external-ffi-bindings", "gui"]
 license = "MIT"
 exclude = [".travis.yml", ".rustfmt.toml", "vagga.yaml"]
 
+[package.metadata.deb]
+maintainer = "Victor Brekenfeld <github@draculix.de>"
+copyright = "2016, Victor Brekenfeld <github@draculix.de>"
+license_file = ["LICENSE", "4"]
+extended_description = """\
+Safe Bindings for Cloudef's wlc (Wayland Compositor C-Library) \
+packaged as a deb."""
+depends = "$auto"
+section = "utility"
+priority = "optional"
+assets = [
+    ["target/release/libwlc.rlib", "usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/", "755"],
+    ["README.md", "usr/share/doc/wlc.rs/README", "644"],
+]
+
 [badges]
 travis-ci = { repository = "Drakulix/wlc.rs" }
 
